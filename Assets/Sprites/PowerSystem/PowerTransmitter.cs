@@ -69,7 +69,13 @@ public class PowerTransmitter : PowerComponent
             // Pulling entire amount due to efficiency losses
             source.powerStorage.PullPower(amount);
             // Adding the adjusted amount due to efficiency losses
-            powerStorage.PushPower(efficiencyAdjusted);
+            float powerOverflow = powerStorage.PushPower(efficiencyAdjusted);
+            
+            // Adds the overflow power back to the source
+            if (powerOverflow > -1)
+            {
+                source.powerStorage.PushPower(powerOverflow);
+            }
         }
         else
         {

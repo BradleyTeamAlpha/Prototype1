@@ -1,0 +1,13 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/contentModel.xml
+/modules.xml
+/projectSettingsUpdater.xml
+/.idea.TeamAlpha.iml
+# Datasource local storage ignored files
+/../../../../../../../../../:\Bradley\2020-2021\Semseter 1\IM 388\TeamAlpha\.idea\.idea.TeamAlpha\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/

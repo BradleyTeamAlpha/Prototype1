@@ -68,13 +68,14 @@ public class PowerStorage : PowerComponent
     /// Push power to an object. Excess power is lost
     /// </summary>
     /// <param name="amount">How much power to push to the object</param>
-    /// <returns>If the power added was ceilinged</returns>>
-    public bool PushPower(float amount)
+    /// <returns>-1 if no overflow, the amount overflowed if needed</returns>>
+    public float PushPower(float amount)
     {
-        // TODO: Add more logic to pushing (and find what that logic should be)
-        //float currentCache = currentAmount;
+        float currentCache = currentAmount;
 
         bool hasCeil = AddPower(amount);
-        return hasCeil;
+
+        // If the value was ceiled, return the amount that was over. Otherwise, return -1 (success)
+        return hasCeil ? (amount - (currentAmount - currentCache)) : -1;
     }
 }

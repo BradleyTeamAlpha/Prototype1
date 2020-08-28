@@ -123,6 +123,39 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &959841180 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2840685437303246089, guid: fc937ceba8b09fb4895fcea57373d85b, type: 3}
+  m_PrefabInstance: {fileID: 2840685437958475413}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f894f88151aaf834a969de7d6061ac97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1048077075 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1357975156650307224, guid: d02196fe97d77e64c82bf4c80201a41d, type: 3}
+  m_PrefabInstance: {fileID: 1357975157415218571}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f894f88151aaf834a969de7d6061ac97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1134433772 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4269307893313089476, guid: 54f8756ddcfb9c947a13d1a3ab9d4f20, type: 3}
+  m_PrefabInstance: {fileID: 4269307892247345704}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f894f88151aaf834a969de7d6061ac97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1356661275
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -189,6 +222,18 @@ PrefabInstance:
     - target: {fileID: 3133270732998952077, guid: 3992bb6b84e96174ca09091915f33953, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3133270732998952078, guid: 3992bb6b84e96174ca09091915f33953, type: 3}
+      propertyPath: connected.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3133270732998952078, guid: 3992bb6b84e96174ca09091915f33953, type: 3}
+      propertyPath: connected.Array.data[0]
+      value: 
+      objectReference: {fileID: 1048077075}
+    - target: {fileID: 3133270732998952079, guid: 3992bb6b84e96174ca09091915f33953, type: 3}
+      propertyPath: fuelCount
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3992bb6b84e96174ca09091915f33953, type: 3}
@@ -282,13 +327,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1357975156650307225, guid: d02196fe97d77e64c82bf4c80201a41d, type: 3}
+      propertyPath: connected.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1357975156650307225, guid: d02196fe97d77e64c82bf4c80201a41d, type: 3}
+      propertyPath: connected.Array.data[0]
+      value: 
+      objectReference: {fileID: 1134433772}
     - target: {fileID: 1357975156650307226, guid: d02196fe97d77e64c82bf4c80201a41d, type: 3}
       propertyPath: m_Name
       value: PowerPole
       objectReference: {fileID: 0}
     - target: {fileID: 1357975156650307230, guid: d02196fe97d77e64c82bf4c80201a41d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.408
       objectReference: {fileID: 0}
     - target: {fileID: 1357975156650307230, guid: d02196fe97d77e64c82bf4c80201a41d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -345,7 +398,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2840685437303246092, guid: fc937ceba8b09fb4895fcea57373d85b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.433
       objectReference: {fileID: 0}
     - target: {fileID: 2840685437303246092, guid: fc937ceba8b09fb4895fcea57373d85b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -400,9 +453,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Battery
       objectReference: {fileID: 0}
+    - target: {fileID: 4269307893313089475, guid: 54f8756ddcfb9c947a13d1a3ab9d4f20, type: 3}
+      propertyPath: connected.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4269307893313089475, guid: 54f8756ddcfb9c947a13d1a3ab9d4f20, type: 3}
+      propertyPath: connected.Array.data[0]
+      value: 
+      objectReference: {fileID: 959841180}
     - target: {fileID: 4269307893313089478, guid: 54f8756ddcfb9c947a13d1a3ab9d4f20, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.925
       objectReference: {fileID: 0}
     - target: {fileID: 4269307893313089478, guid: 54f8756ddcfb9c947a13d1a3ab9d4f20, type: 3}
       propertyPath: m_LocalPosition.y
