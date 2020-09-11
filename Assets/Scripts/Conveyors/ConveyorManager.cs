@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,8 +14,15 @@ public class ConveyorManager : MonoBehaviour
 
     [Tooltip("How many swaps the player has done")]
     public int swapsDone = 0;
+
+    [Tooltip("Maximum number of swaps")]
+    public int totalSwaps = Int32.MaxValue;
     
+    [Tooltip("Is the puzzle currently running (is coal being spawned)")]
+    public bool isRunning = false;
     
+    [Tooltip("Can only adjcent swaps be made")]
+    public bool isAdjcency = false;
     /*
      * if list is length 2
      *     swap tiles
@@ -31,16 +39,35 @@ public class ConveyorManager : MonoBehaviour
             sr.color = selectedColor;
         }
         
+        // Make sure 2 tiles are selected
         if (selectedTiles.Count == 2)
         {
-            if (!selectedTiles[0].Equals(selectedTiles[1]))
+            // Make sure the selected tiles are not the same, and that the player has swaps left
+            if (!selectedTiles[0].Equals(selectedTiles[1]) && swapsDone < totalSwaps)
             {
-                Vector3 temp = selectedTiles[0].transform.position;
+                // Make sure the selected tiles share a color
+                if ((selectedTiles[0].GetComponent<ConveyorSelector>().color &
+                    selectedTiles[1].GetComponent<ConveyorSelector>().color) != ConveyorSelector.TileColor.COLOR_NONE)
+                {
+                    // Calculate the difference in their positions
+                    ConveyorDirection dir0 = selectedTiles[0].GetComponent<ConveyorDirection>();
+                    ConveyorDirection dir1 = selectedTiles[1].GetComponent<ConveyorDirection>();
+                    float xDir = Mathf.Abs((selectedTiles[0].transform.position.x + 8) -
+                                           (selectedTiles[1].transform.position.x + 8));
+                    float yDir = Mathf.Abs((selectedTiles[0].transform.position.y + 8) -
+                                           (selectedTiles[1].transform.position.y + 8));
+                    
+                    if (!isAdjcency || (xDir <= 2 && yDir <= 2))
+                    {
+                        Vector3 temp = selectedTiles[0].transform.position;
 
-                selectedTiles[0].transform.position = selectedTiles[1].transform.position;
-                selectedTiles[1].transform.position = temp;
-                selectedTiles[1].GetComponent<SpriteRenderer>().color = selectedTiles[1].GetComponent<ConveyorSelector>().startColor;
-                ++swapsDone;
+                        selectedTiles[0].transform.position = selectedTiles[1].transform.position;
+                        selectedTiles[1].transform.position = temp;
+                        selectedTiles[1].GetComponent<SpriteRenderer>().color =
+                            selectedTiles[1].GetComponent<ConveyorSelector>().startColor;
+                        ++swapsDone;
+                    }
+                }
             }
 
             selectedTiles[0].GetComponent<SpriteRenderer>().color = selectedTiles[0].GetComponent<ConveyorSelector>().startColor;
@@ -98,6 +125,11 @@ public class ConveyorManager : MonoBehaviour
             shorten.direction = (ConveyorDirection.Direction)left;
         }
 
+    }
+
+    public void ToggleSpawning()
+    {
+        isRunning = !isRunning;
     }
     
 }

@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - TileManager
+  - Conveyor
+  - XTile
+  - TargetObject
   layers:
   - Default
   - TransparentFX
