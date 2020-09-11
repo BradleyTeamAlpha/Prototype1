@@ -14,6 +14,7 @@ public class ConveyorManager : MonoBehaviour
     [Tooltip("How many swaps the player has done")]
     public int swapsDone = 0;
     
+    
     /*
      * if list is length 2
      *     swap tiles
@@ -47,4 +48,56 @@ public class ConveyorManager : MonoBehaviour
             selectedTiles.Clear();
         }
     }
+    
+    uint RotateLeft(uint x, int y)
+    {
+        uint k = (x << y);
+        if(k > 8)
+        {
+            k = 1;
+        }
+        return k;
+    }
+    uint RotateRight(uint x, int y)
+    {
+        uint k = (x >> y);
+        if(k < 1)
+        {
+            k = 8;
+        }
+        return k;
+    }
+    public void RotateTile(float degrees)
+    {
+       
+        selectedTiles[0].transform.Rotate(0, 0, degrees);
+
+        /*
+        if(degrees > 0)
+        {
+            Microsoft.VisualStudio.Utilities.RotateRight(manager.selectedTiles[0].GetComponent<ConveyorDirection>().shifter, 1);
+        }
+        else
+        {
+            Microsoft.VisualStudio.Utilities.RotateLeft(manager.selectedTiles[0].GetComponent<ConveyorDirection>().shifter, 1);
+        }
+       */
+        ConveyorDirection shorten = selectedTiles[0].GetComponent<ConveyorDirection>();
+        //Debug.Log("Hopefully shifting");
+        if(degrees > 0)
+        {
+            //Debug.Log("shifting right");
+            uint right = RotateRight((uint)shorten.direction, 1);
+            Debug.Log("Right value is" + right);
+            shorten.direction = (ConveyorDirection.Direction)right;
+        }
+        else
+        {
+            Debug.Log("shifting left");
+            uint left =  RotateLeft((uint)shorten.direction, 1);
+            shorten.direction = (ConveyorDirection.Direction)left;
+        }
+
+    }
+    
 }

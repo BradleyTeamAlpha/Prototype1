@@ -5,7 +5,7 @@ using UnityEngine;
 public class ConveyorDirection : MonoBehaviour
 {
    // [Flags]
-  public enum bitShiftMayhem
+  public enum Direction
     {
         noDirection = 0, 
         Left = 1,
@@ -13,6 +13,6 @@ public class ConveyorDirection : MonoBehaviour
         Right = 4,
         Down = 8
     }
-    public bitShiftMayhem shifter;
+    public Direction direction;
 
 }
