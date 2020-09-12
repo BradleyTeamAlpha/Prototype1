@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - TileManager
+  - Conveyor
+  - XTile
+  - TargetObject
   layers:
   - Default
   - TransparentFX
@@ -39,6 +42,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Conveyor
+    uniqueID: 1475453493
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

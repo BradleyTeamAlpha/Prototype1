@@ -17,6 +17,18 @@ public class ConveyorSelector : MonoBehaviour
     
     [Tooltip("The starting color of the object")]
     public Color startColor;
+
+    
+    [Flags]
+    public enum TileColor
+    {
+        COLOR_NONE = 0,
+        COLOR_RED = 1,
+        COLOR_BLUE = 2,
+        COLOR_GREEN = 4
+    }
+
+    public TileColor color = TileColor.COLOR_NONE;
     
     private void Start()
     {
