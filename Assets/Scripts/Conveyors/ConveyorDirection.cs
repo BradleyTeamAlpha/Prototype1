@@ -1,9 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
 public class ConveyorDirection : MonoBehaviour
 {
+    [Flags]
     public enum Direction
     {
         noDirection = 0, 

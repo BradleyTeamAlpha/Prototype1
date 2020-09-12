@@ -5,7 +5,16 @@ using UnityEngine;
 
 public class ConveyorMovement : MonoBehaviour
 {
+    [Tooltip("How long the object lives")]
+    public float timeToLive = 400f;
+    
     private ConveyorDirection.Direction direction;
+
+    private void Start()
+    {
+        Destroy(gameObject, timeToLive);
+    }
+    
     void OnTriggerStay2D(Collider2D movement)
     {
         //transform.Translate(Vector2.up * Time.deltaTime);

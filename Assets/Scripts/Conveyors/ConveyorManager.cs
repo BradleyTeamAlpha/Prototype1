@@ -78,6 +78,7 @@ public class ConveyorManager : MonoBehaviour
     
     uint RotateLeft(uint x, int y)
     {
+        //(original << bits) | (original >> (32 - bits))
         uint k = (x << y);
         if(k > 8)
         {
@@ -87,6 +88,7 @@ public class ConveyorManager : MonoBehaviour
     }
     uint RotateRight(uint x, int y)
     {
+        //(original >> bits) | (original << (32 - bits))
         uint k = (x >> y);
         if(k < 1)
         {
@@ -109,20 +111,52 @@ public class ConveyorManager : MonoBehaviour
             Microsoft.VisualStudio.Utilities.RotateLeft(manager.selectedTiles[0].GetComponent<ConveyorDirection>().shifter, 1);
         }
        */
+        ConveyorDirection enterDir = null;
+        ConveyorDirection exitDir = null;
+        if (selectedTiles[0].transform.childCount != 0)
+        {
+            enterDir = selectedTiles[0].GetComponent<Transform>().GetChild(0)
+                .GetComponent<ConveyorDirection>();
+            exitDir = selectedTiles[0].GetComponent<Transform>().GetChild(1)
+                .GetComponent<ConveyorDirection>();
+        }
+
         ConveyorDirection shorten = selectedTiles[0].GetComponent<ConveyorDirection>();
-        //Debug.Log("Hopefully shifting");
+        
         if(degrees > 0)
         {
-            //Debug.Log("shifting right");
-            uint right = RotateRight((uint)shorten.direction, 1);
-            Debug.Log("Right value is" + right);
-            shorten.direction = (ConveyorDirection.Direction)right;
+            Debug.Log("shifting right");
+            if (enterDir == null)
+            {
+                uint right = RotateRight((uint) shorten.direction, 1);
+                Debug.Log("Right value is" + right);
+                shorten.direction = (ConveyorDirection.Direction) right;
+            }
+            else
+            {
+                uint enterRight = RotateRight((uint) enterDir.direction, 1);
+                uint exitRight = RotateRight((uint) exitDir.direction, 1);
+
+                enterDir.direction = (ConveyorDirection.Direction) enterRight;
+                exitDir.direction = (ConveyorDirection.Direction) exitRight;
+            }
         }
         else
         {
-            Debug.Log("shifting left");
-            uint left =  RotateLeft((uint)shorten.direction, 1);
-            shorten.direction = (ConveyorDirection.Direction)left;
+            if (enterDir == null)
+            {
+                Debug.Log("shifting left");
+                uint left = RotateLeft((uint) shorten.direction, 1);
+                shorten.direction = (ConveyorDirection.Direction) left;
+            }
+            else
+            {
+                uint enterLeft = RotateLeft((uint) enterDir.direction, 1);
+                uint exitLeft = RotateLeft((uint) exitDir.direction, 1);
+
+                enterDir.direction = (ConveyorDirection.Direction) enterLeft;
+                exitDir.direction = (ConveyorDirection.Direction) exitLeft;
+            }
         }
 
     }
