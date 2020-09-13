@@ -34,4 +34,15 @@ public class MenuBehaviour : MonoBehaviour
         // Loads the next scene.
         UnityEngine.SceneManagement.SceneManager.LoadScene(level);
     }
+
+    public void QuitGame()
+    {
+        // This if statement will quit the game after being
+        // built and in the game panel in Unity.
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
 }
