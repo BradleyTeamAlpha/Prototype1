@@ -57,7 +57,7 @@ public class ConveyorManager : MonoBehaviour
                     float yDir = Mathf.Abs((selectedTiles[0].transform.position.y + 8) -
                                            (selectedTiles[1].transform.position.y + 8));
                     
-                    if (!isAdjcency || (xDir <= 2 && yDir <= 2))
+                    if (!isAdjcency || (xDir <= 1 && yDir <= 1))
                     {
                         Vector3 temp = selectedTiles[0].transform.position;
 

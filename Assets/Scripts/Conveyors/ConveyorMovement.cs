@@ -56,7 +56,7 @@ public class ConveyorMovement : MonoBehaviour
 
     private IEnumerator SetDirection(GameObject target)
     {
-        yield return new WaitForSeconds(0.9f);
+        yield return new WaitForSeconds(0.45f);
         direction = target.GetComponent<ConveyorDirection>().direction;
         transform.position *= 1.001f;
     }
