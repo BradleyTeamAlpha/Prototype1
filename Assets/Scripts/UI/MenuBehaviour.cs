@@ -35,6 +35,11 @@ public class MenuBehaviour : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(level);
     }
 
+    public void PauseTime(int currentTime)
+    {
+        Time.timeScale = currentTime;
+    }
+
     public void QuitGame()
     {
         // This if statement will quit the game after being
