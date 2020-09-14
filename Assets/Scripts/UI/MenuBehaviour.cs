@@ -6,6 +6,7 @@ public class MenuBehaviour : MonoBehaviour
 {
     int level = 0;
     public float waitTime;
+    public bool canHighLight = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +39,11 @@ public class MenuBehaviour : MonoBehaviour
     public void PauseTime(int currentTime)
     {
         Time.timeScale = currentTime;
+    }
+
+    public void HighLightController(bool highLight)
+    {
+        canHighLight = highLight;
     }
 
     public void QuitGame()

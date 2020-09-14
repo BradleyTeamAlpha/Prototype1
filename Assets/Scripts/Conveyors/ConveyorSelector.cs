@@ -18,6 +18,8 @@ public class ConveyorSelector : MonoBehaviour
     [Tooltip("The starting color of the object")]
     public Color startColor;
 
+    public MenuBehaviour mb;
+
     
     [Flags]
     public enum TileColor
@@ -34,6 +36,7 @@ public class ConveyorSelector : MonoBehaviour
     {
         manager = GameObject.FindWithTag("TileManager").GetComponent<ConveyorManager>();
         sr = GetComponent<SpriteRenderer>();
+        mb = GameObject.FindObjectOfType<MenuBehaviour>();
         startColor = sr.color;
     }
     
@@ -42,11 +45,15 @@ public class ConveyorSelector : MonoBehaviour
     /// </summary>
     private void OnMouseEnter()
     {
-        Color newColor = sr.color;
-        newColor.r -= 0.5f;
-        newColor.g -= 0.5f;
-        newColor.b -= 0.5f;
-        sr.color = newColor;
+        if (mb.canHighLight)
+        {
+            Color newColor = sr.color;
+            newColor.r -= 0.5f;
+            newColor.g -= 0.5f;
+            newColor.b -= 0.5f;
+            sr.color = newColor;
+        }
+
     }
 
     /// <summary>
@@ -54,7 +61,11 @@ public class ConveyorSelector : MonoBehaviour
     /// </summary>
     private void OnMouseDown()
     {
-        manager.selectedTiles.Add(gameObject);
+        if(mb.canHighLight)
+        {
+            manager.selectedTiles.Add(gameObject);
+        }
+        
     }
 
     /// <summary>
