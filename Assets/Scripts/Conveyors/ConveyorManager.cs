@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ConveyorManager : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class ConveyorManager : MonoBehaviour
     
     [Tooltip("Can only adjcent swaps be made")]
     public bool isAdjcency = false;
+    
+    public Text swapsDoneText;
     /*
      * if list is length 2
      *     swap tiles
@@ -33,6 +36,7 @@ public class ConveyorManager : MonoBehaviour
 
     private void Update()
     {
+        swapsDoneText.text = swapsDone.ToString();
         foreach (var tile in selectedTiles)
         {
             SpriteRenderer sr = tile.GetComponent<SpriteRenderer>();

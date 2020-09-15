@@ -32,6 +32,7 @@ public class MenuBehaviour : MonoBehaviour
 
     public void LoadNext()
     {
+        Time.timeScale = 1;
         // Loads the next scene.
         UnityEngine.SceneManagement.SceneManager.LoadScene(level);
     }

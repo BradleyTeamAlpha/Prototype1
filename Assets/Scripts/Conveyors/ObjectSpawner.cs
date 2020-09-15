@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,10 +12,12 @@ public class ObjectSpawner : MonoBehaviour
     public float spawnTimer = 5f;
 
     private ConveyorManager manager;
-
+    
+    
     private void Start()
     {
         manager = GameObject.FindWithTag("TileManager").GetComponent<ConveyorManager>();
+        //InvokeRepeating("SpawnObject", 0, spawnTimer);
         StartCoroutine(SpawnObject());
     }
     
@@ -22,12 +25,18 @@ public class ObjectSpawner : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(spawnTimer);
+            Debug.Log($"isRunning: {manager.isRunning}");
             if (manager.isRunning)
             {
+                Debug.Log("Spawning");
                 Instantiate(toSpawn, transform.position + spawnOffset, Quaternion.identity);
             }
+            yield return new WaitForSeconds(spawnTimer);
         }
-        
+    }
+
+    private void OnDestroy()
+    {
+        StopAllCoroutines();
     }
 }
