@@ -10,6 +10,8 @@ public class ConveyorMovement : MonoBehaviour
     
     private ConveyorDirection.Direction direction;
 
+
+    private int converyorsTouching = 1;
     private void Start()
     {
         Destroy(gameObject, timeToLive);
@@ -26,16 +28,16 @@ public class ConveyorMovement : MonoBehaviour
         switch (direction)
         {
             case ConveyorDirection.Direction.Left:
-                transform.Translate(Vector2.left * Time.deltaTime);
+                transform.Translate((Vector2.left / converyorsTouching) * Time.deltaTime);
                 break;
             case ConveyorDirection.Direction.Right:
-                transform.Translate(Vector2.right * Time.deltaTime);
+                transform.Translate((Vector2.right / converyorsTouching) * Time.deltaTime);
                 break;
             case ConveyorDirection.Direction.Up:
-                transform.Translate(Vector2.up * Time.deltaTime);
+                transform.Translate((Vector2.up / converyorsTouching) * Time.deltaTime);
                 break;
             case ConveyorDirection.Direction.Down:
-                transform.Translate(Vector2.down * Time.deltaTime);
+                transform.Translate((Vector2.down / converyorsTouching) * Time.deltaTime);
                 break;
         } 
     }
@@ -51,7 +53,18 @@ public class ConveyorMovement : MonoBehaviour
         {
             return;
         }
+
+        ++converyorsTouching;
         StartCoroutine(SetDirection(other.gameObject));
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Conveyor"))
+        {
+            --converyorsTouching;
+        }
+        
     }
 
     private IEnumerator SetDirection(GameObject target)

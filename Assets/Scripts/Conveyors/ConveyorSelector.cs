@@ -9,6 +9,8 @@ public class ConveyorSelector : MonoBehaviour
     [Tooltip("Reference to the player manager")]
     public ConveyorManager manager;
 
+    [Tooltip("Can this tile be rotated")]
+    public bool canRotate = false;
 
     /// <summary>
     /// Reference to the object's sprite renderer

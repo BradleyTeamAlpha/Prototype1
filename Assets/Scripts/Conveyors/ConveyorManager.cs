@@ -102,6 +102,10 @@ public class ConveyorManager : MonoBehaviour
     }
     public void RotateTile(float degrees)
     {
+        if (!selectedTiles[0].GetComponent<ConveyorSelector>().canRotate)
+        {
+            return;
+        }
        
         selectedTiles[0].transform.Rotate(0, 0, degrees);
 
