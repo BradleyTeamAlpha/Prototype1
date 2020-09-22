@@ -40,6 +40,7 @@ public class ConveyorMovement : MonoBehaviour
                 transform.Translate((Vector2.down / converyorsTouching) * Time.deltaTime);
                 break;
         } 
+        //Debug.Log(gameObject.name + " Touching " + converyorsTouching);
     }
 
 
@@ -55,6 +56,7 @@ public class ConveyorMovement : MonoBehaviour
         }
 
         ++converyorsTouching;
+        //Debug.Log(gameObject.name + " Touching " + converyorsTouching);
         StartCoroutine(SetDirection(other.gameObject));
     }
 
@@ -63,14 +65,17 @@ public class ConveyorMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Conveyor"))
         {
             --converyorsTouching;
+            //Debug.Log(gameObject.name + " Touching " + converyorsTouching);
         }
         
     }
 
     private IEnumerator SetDirection(GameObject target)
     {
-        yield return new WaitForSeconds(0.45f);
+        Debug.Log("Starting direction set");
+        yield return new WaitForSeconds(1.15f);
         direction = target.GetComponent<ConveyorDirection>().direction;
         transform.position *= 1.001f;
+        Debug.Log("Direction set");
     }
 }
