@@ -18,6 +18,10 @@ public class MultiExitTiles : MonoBehaviour
         {
             k = 1;
         }
+        if(x == 8)
+        {
+            k = 2;
+        }
         return k;
     }
     uint RotateRight(uint x, int y)
