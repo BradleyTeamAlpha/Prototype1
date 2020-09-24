@@ -15,7 +15,8 @@ public class GameManager : MonoBehaviour
 
     [Tooltip("Object to show when the player wins the level")]
     public GameObject winObject;
-
+    
+    
     /// <summary>
     /// Increase the number of completed furnaces by 1
     /// </summary>

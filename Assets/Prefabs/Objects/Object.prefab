@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8180540442625612515}
   - component: {fileID: 8180540442625612514}
   m_Layer: 0
-  m_Name: Coal
+  m_Name: Object
   m_TagString: TargetObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 462ffc6fb7744f547b98f9a7e40e87cb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6d71d7f17ab2ad7469004b40e0aa9724, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
