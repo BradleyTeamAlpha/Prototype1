@@ -21,10 +21,7 @@ public class ConveyorManager : MonoBehaviour
     
     [Tooltip("Is the puzzle currently running (is coal being spawned)")]
     public bool isRunning = false;
-    
-    [Tooltip("Can only adjcent swaps be made")]
-    public bool isAdjcency = false;
-    
+
     public Text swapsDoneText;
     /*
      * if list is length 2
@@ -53,24 +50,12 @@ public class ConveyorManager : MonoBehaviour
                 if ((selectedTiles[0].GetComponent<ConveyorSelector>().color &
                     selectedTiles[1].GetComponent<ConveyorSelector>().color) != ConveyorSelector.TileColor.COLOR_NONE)
                 {
-                    // Calculate the difference in their positions
-                    ConveyorDirection dir0 = selectedTiles[0].GetComponent<ConveyorDirection>();
-                    ConveyorDirection dir1 = selectedTiles[1].GetComponent<ConveyorDirection>();
-                    float xDir = Mathf.Abs((selectedTiles[0].transform.position.x + 8) -
-                                           (selectedTiles[1].transform.position.x + 8));
-                    float yDir = Mathf.Abs((selectedTiles[0].transform.position.y + 8) -
-                                           (selectedTiles[1].transform.position.y + 8));
-                    
-                    if (!isAdjcency || (xDir <= 1 && yDir <= 1))
-                    {
-                        Vector3 temp = selectedTiles[0].transform.position;
-
-                        selectedTiles[0].transform.position = selectedTiles[1].transform.position;
-                        selectedTiles[1].transform.position = temp;
-                        selectedTiles[1].GetComponent<SpriteRenderer>().color =
-                            selectedTiles[1].GetComponent<ConveyorSelector>().startColor;
-                        ++swapsDone;
-                    }
+                    Vector3 temp = selectedTiles[0].transform.position;
+                    selectedTiles[0].transform.position = selectedTiles[1].transform.position;
+                    selectedTiles[1].transform.position = temp;
+                    selectedTiles[1].GetComponent<SpriteRenderer>().color =
+                        selectedTiles[1].GetComponent<ConveyorSelector>().startColor;
+                    ++swapsDone;
                 }
             }
 
@@ -80,21 +65,34 @@ public class ConveyorManager : MonoBehaviour
         }
     }
     
-    uint RotateLeft(uint x, int y)
+    /// <summary>
+    /// Rotates the given number x by y spaces
+    /// </summary>
+    /// <param name="x">The number to rotate</param>
+    /// <param name="y">How many spaces to rotate</param>
+    /// <returns>An 8-bit rotated number</returns>
+    byte RotateLeft(byte x, byte y, bool wrap = true)
     {
         //(original << bits) | (original >> (32 - bits))
-        uint k = (x << y);
-        if(k > 8)
+        byte k = (byte)(x << y);
+        if(wrap & k > 8)
         {
             k = 1;
         }
         return k;
     }
-    uint RotateRight(uint x, int y)
+    
+    /// <summary>
+    /// Rotates the given number x by y spaces
+    /// </summary>
+    /// <param name="x">The number to rotate</param>
+    /// <param name="y">How many spaces to rotate</param>
+    /// <returns>An 8-bit rotated number</returns>
+    byte RotateRight(byte x, byte y, bool wrap = true)
     {
         //(original >> bits) | (original << (32 - bits))
-        uint k = (x >> y);
-        if(k < 1)
+        byte k = (byte)(x >> y);
+        if(wrap & k < 1)
         {
             k = 8;
         }
@@ -119,51 +117,46 @@ public class ConveyorManager : MonoBehaviour
             Microsoft.VisualStudio.Utilities.RotateLeft(manager.selectedTiles[0].GetComponent<ConveyorDirection>().shifter, 1);
         }
        */
-        ConveyorDirection enterDir = null;
-        ConveyorDirection exitDir = null;
-        if (selectedTiles[0].transform.childCount != 0)
-        {
-            enterDir = selectedTiles[0].GetComponent<Transform>().GetChild(0)
-                .GetComponent<ConveyorDirection>();
-            exitDir = selectedTiles[0].GetComponent<Transform>().GetChild(1)
-                .GetComponent<ConveyorDirection>();
-        }
 
         ConveyorDirection shorten = selectedTiles[0].GetComponent<ConveyorDirection>();
+
+        MultiExitTiles multiExitTiles = selectedTiles[0].GetComponent<MultiExitTiles>();
         
         if(degrees > 0)
         {
-            Debug.Log("shifting right");
-            if (enterDir == null)
+            uint right = RotateRight((byte) shorten.direction, 1);
+            shorten.direction = (ConveyorDirection.Direction) right;
+            if (multiExitTiles != null)
             {
-                uint right = RotateRight((uint) shorten.direction, 1);
-                Debug.Log("Right value is" + right);
-                shorten.direction = (ConveyorDirection.Direction) right;
-            }
-            else
-            {
-                uint enterRight = RotateRight((uint) enterDir.direction, 1);
-                uint exitRight = RotateRight((uint) exitDir.direction, 1);
-
-                enterDir.direction = (ConveyorDirection.Direction) enterRight;
-                exitDir.direction = (ConveyorDirection.Direction) exitRight;
+                bool isOdd = (multiExitTiles.outputDirections & ConveyorDirection.Direction.Left) != 0;
+                byte temp = RotateRight((byte)multiExitTiles.outputDirections, 1, false);
+                Debug.Log("Temp: " + temp);
+                if (isOdd)
+                {
+                    temp += 8;
+                }
+                multiExitTiles.outputDirections = (ConveyorDirection.Direction)temp;
             }
         }
         else
         {
-            if (enterDir == null)
+            uint left = RotateLeft((byte) shorten.direction, 1);
+            shorten.direction = (ConveyorDirection.Direction) left;
+            if (multiExitTiles != null)
             {
-                Debug.Log("shifting left");
-                uint left = RotateLeft((uint) shorten.direction, 1);
-                shorten.direction = (ConveyorDirection.Direction) left;
-            }
-            else
-            {
-                uint enterLeft = RotateLeft((uint) enterDir.direction, 1);
-                uint exitLeft = RotateLeft((uint) exitDir.direction, 1);
-
-                enterDir.direction = (ConveyorDirection.Direction) enterLeft;
-                exitDir.direction = (ConveyorDirection.Direction) exitLeft;
+                byte temp = RotateLeft((byte)multiExitTiles.outputDirections, 1, false);
+                bool didMax = false;
+                Debug.Log("Temp: " + temp);
+                if (temp > 15)
+                {
+                    temp -= 15;
+                    didMax = true;
+                }
+                multiExitTiles.outputDirections = (ConveyorDirection.Direction)temp;
+                if (didMax)
+                {
+                    multiExitTiles.outputDirections |= ConveyorDirection.Direction.Left;
+                }
             }
         }
 
