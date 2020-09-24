@@ -599,6 +599,10 @@ PrefabInstance:
       propertyPath: winObject
       value: 
       objectReference: {fileID: 770761473272138284}
+    - target: {fileID: 3577085435813747792, guid: 7a45350f7bf071042ae052a70136ce72, type: 3}
+      propertyPath: furnacesToWin
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3577085435813747793, guid: 7a45350f7bf071042ae052a70136ce72, type: 3}
       propertyPath: m_Name
       value: GameManager
