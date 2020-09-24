@@ -130,7 +130,6 @@ public class ConveyorManager : MonoBehaviour
             {
                 bool isOdd = (multiExitTiles.outputDirections & ConveyorDirection.Direction.Left) != 0;
                 byte temp = RotateRight((byte)multiExitTiles.outputDirections, 1, false);
-                Debug.Log("Temp: " + temp);
                 if (isOdd)
                 {
                     temp += 8;
@@ -145,18 +144,8 @@ public class ConveyorManager : MonoBehaviour
             if (multiExitTiles != null)
             {
                 byte temp = RotateLeft((byte)multiExitTiles.outputDirections, 1, false);
-                bool didMax = false;
-                Debug.Log("Temp: " + temp);
-                if (temp > 15)
-                {
-                    temp -= 15;
-                    didMax = true;
-                }
+                temp %= 15;
                 multiExitTiles.outputDirections = (ConveyorDirection.Direction)temp;
-                if (didMax)
-                {
-                    multiExitTiles.outputDirections |= ConveyorDirection.Direction.Left;
-                }
             }
         }
 
