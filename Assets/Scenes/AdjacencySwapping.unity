@@ -1184,6 +1184,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3564118891567929057, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3564118891567929059, guid: 66ac402061a837849967f63863b5efbe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1411,6 +1415,10 @@ PrefabInstance:
     - target: {fileID: 3564118892837181052, guid: 66ac402061a837849967f63863b5efbe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ToggleSpawning
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564118893061254060, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3564118893061254062, guid: 66ac402061a837849967f63863b5efbe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3076,7 +3084,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.648611
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
