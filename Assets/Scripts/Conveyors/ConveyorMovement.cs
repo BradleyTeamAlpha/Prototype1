@@ -73,7 +73,7 @@ public class ConveyorMovement : MonoBehaviour
     private IEnumerator SetDirection(GameObject target)
     {
         Debug.Log("Starting direction set");
-        yield return new WaitForSeconds(1.15f);
+        yield return new WaitForSeconds(1.9f);
         direction = target.GetComponent<ConveyorDirection>().direction;
         transform.position *= 1.001f;
         Debug.Log("Direction set");
