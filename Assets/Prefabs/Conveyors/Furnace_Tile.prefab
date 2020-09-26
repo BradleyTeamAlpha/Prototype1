@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectNeeded: 5
+  litTexture: {fileID: 21300000, guid: b2ff7b5af75bbfa448eb8a3833283f16, type: 3}
 --- !u!61 &2831865102513992868
 BoxCollider2D:
   m_ObjectHideFlags: 0

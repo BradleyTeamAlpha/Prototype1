@@ -8,6 +8,8 @@ public class ObjectEndpoint : MonoBehaviour
     [Tooltip("How many objects this furnaces has obtained so far")]
     private int objectAquired = 0;
 
+    public Sprite litTexture;
+
     /// <summary>
     /// Has this furnace updated the GameManager yet?
     /// </summary>
@@ -33,6 +35,7 @@ public class ObjectEndpoint : MonoBehaviour
         if (!updatedGM && objectAquired == objectNeeded)
         {
             updatedGM = true;
+            GetComponent<SpriteRenderer>().sprite = litTexture;
             gm.AddCompleteFurnace();
         }
     }
