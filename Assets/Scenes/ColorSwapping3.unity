@@ -1694,8 +1694,6 @@ Transform:
   - {fileID: 1131835296}
   - {fileID: 117355548}
   - {fileID: 1070079774}
-  - {fileID: 960614725}
-  - {fileID: 859548845}
   - {fileID: 1454173821}
   - {fileID: 543757936}
   - {fileID: 167075541}
@@ -1716,7 +1714,9 @@ Transform:
   - {fileID: 60276560}
   - {fileID: 1955811093}
   - {fileID: 661131453}
+  - {fileID: 960614725}
   - {fileID: 687990472}
+  - {fileID: 859548845}
   - {fileID: 11743996}
   m_Father: {fileID: 937721118}
   m_RootOrder: 0
@@ -2282,7 +2282,7 @@ Grid:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 937721116}
   m_Enabled: 1
-  m_CellSize: {x: 1, y: 1, z: 0}
+  m_CellSize: {x: 1.75, y: 1.75, z: 0}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0

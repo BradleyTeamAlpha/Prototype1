@@ -503,7 +503,7 @@ Grid:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180301618}
   m_Enabled: 1
-  m_CellSize: {x: 1, y: 1, z: 0}
+  m_CellSize: {x: 1.75, y: 1.75, z: 0}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
@@ -3237,11 +3237,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5445384744223184807, guid: 3e0cf9d36d6842444905f14ac3fa24bc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.5
+      value: 0.875
       objectReference: {fileID: 0}
     - target: {fileID: 5445384744223184807, guid: 3e0cf9d36d6842444905f14ac3fa24bc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5
+      value: 0.875
       objectReference: {fileID: 0}
     - target: {fileID: 5445384744223184807, guid: 3e0cf9d36d6842444905f14ac3fa24bc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3397,11 +3397,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4887231812952922097, guid: b53bd66e693effa439893ea42c888d83, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5
+      value: -2.535
       objectReference: {fileID: 0}
     - target: {fileID: 4887231812952922097, guid: b53bd66e693effa439893ea42c888d83, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: -0.4225
       objectReference: {fileID: 0}
     - target: {fileID: 4887231812952922097, guid: b53bd66e693effa439893ea42c888d83, type: 3}
       propertyPath: m_LocalPosition.z
