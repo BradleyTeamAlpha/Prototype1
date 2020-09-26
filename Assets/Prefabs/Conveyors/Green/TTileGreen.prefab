@@ -186,7 +186,7 @@ MonoBehaviour:
   canRotate: 0
   startColor: {r: 0, g: 0, b: 0, a: 0}
   mb: {fileID: 0}
-  color: 1
+  color: 4
 --- !u!114 &4976181862151438395
 MonoBehaviour:
   m_ObjectHideFlags: 0
