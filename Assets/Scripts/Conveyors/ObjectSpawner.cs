@@ -25,10 +25,10 @@ public class ObjectSpawner : MonoBehaviour
     {
         while (true)
         {
-            Debug.Log($"isRunning: {manager.isRunning}");
+            //Debug.Log($"isRunning: {manager.isRunning}");
             if (manager.isRunning)
             {
-                Debug.Log("Spawning");
+                //Debug.Log("Spawning");
                 Instantiate(toSpawn, transform.position + spawnOffset, Quaternion.identity);
             }
             yield return new WaitForSeconds(spawnTimer);

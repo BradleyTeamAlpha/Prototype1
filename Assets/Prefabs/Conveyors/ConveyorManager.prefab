@@ -44,3 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedTiles: []
+  selectedColor: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 1}
+  swapsDone: 0
+  totalSwaps: 2147483647
+  isRunning: 0
+  swapsDoneText: {fileID: 0}

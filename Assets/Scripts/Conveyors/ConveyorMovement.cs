@@ -10,6 +10,7 @@ public class ConveyorMovement : MonoBehaviour
     
     private ConveyorDirection.Direction direction;
 
+    public float speed = 5;
 
     private int converyorsTouching = 1;
     private void Start()
@@ -28,16 +29,16 @@ public class ConveyorMovement : MonoBehaviour
         switch (direction)
         {
             case ConveyorDirection.Direction.Left:
-                transform.Translate((Vector2.left / converyorsTouching) * Time.deltaTime);
+                transform.Translate(((Vector2.left * speed) / converyorsTouching) * Time.deltaTime);
                 break;
             case ConveyorDirection.Direction.Right:
-                transform.Translate((Vector2.right / converyorsTouching) * Time.deltaTime);
+                transform.Translate(((Vector2.right * speed) / converyorsTouching) * Time.deltaTime);
                 break;
             case ConveyorDirection.Direction.Up:
-                transform.Translate((Vector2.up / converyorsTouching) * Time.deltaTime);
+                transform.Translate(((Vector2.up * speed) / converyorsTouching) * Time.deltaTime);
                 break;
             case ConveyorDirection.Direction.Down:
-                transform.Translate((Vector2.down / converyorsTouching) * Time.deltaTime);
+                transform.Translate(((Vector2.down * speed) / converyorsTouching) * Time.deltaTime);
                 break;
         } 
         //Debug.Log(gameObject.name + " Touching " + converyorsTouching);
@@ -73,7 +74,7 @@ public class ConveyorMovement : MonoBehaviour
     private IEnumerator SetDirection(GameObject target)
     {
         Debug.Log("Starting direction set");
-        yield return new WaitForSeconds(1.9f);
+        yield return new WaitForSeconds(0.38f);
         direction = target.GetComponent<ConveyorDirection>().direction;
         transform.position *= 1.001f;
         Debug.Log("Direction set");
