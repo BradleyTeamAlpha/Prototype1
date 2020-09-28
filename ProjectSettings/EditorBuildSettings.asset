@@ -23,12 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ColorSwapping2.unity
     guid: 84ddbdd0659fbe54f9104b491bbd4826
+  - enabled: 1
+    path: Assets/Scenes/PuzzleTestingAustin.unity
+    guid: a4d38e05db6b0714682c67ff896d06d0
   - enabled: 0
     path: Assets/Scenes/ColorSwapping.unity
     guid: fc14fb01c849aeb4d9f27645bbb1fb8c
-  - enabled: 1
-    path: Assets/Scenes/ColorSwapping3.unity
-    guid: 405ef7543a9234c4e9d236f04a14cf98
   - enabled: 1
     path: Assets/Scenes/ColorPuzzleAustin3.unity
     guid: 21774bc9e34ee9048a1ae390223cfcfc
@@ -36,6 +36,6 @@ EditorBuildSettings:
     path: Assets/Scenes/ColorSwapping4.unity
     guid: d0eefb7eafba08341aba91531f3af273
   - enabled: 1
-    path: Assets/Scenes/PuzzleTestingAustin.unity
-    guid: a4d38e05db6b0714682c67ff896d06d0
+    path: Assets/Scenes/ColorSwapping3.unity
+    guid: 405ef7543a9234c4e9d236f04a14cf98
   m_configObjects: {}
