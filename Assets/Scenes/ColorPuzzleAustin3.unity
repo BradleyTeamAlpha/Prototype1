@@ -2312,11 +2312,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -274.2192
       objectReference: {fileID: 0}
-    - target: {fileID: 6789587550796316521, guid: 66ac402061a837849967f63863b5efbe, type: 3}
-      propertyPath: m_Text
-      value: Broken wire tiles block your path and must be worked around as they
-        can't be swapped.
-      objectReference: {fileID: 0}
     - target: {fileID: 7241075197330499920, guid: 66ac402061a837849967f63863b5efbe, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2324,13 +2319,6 @@ PrefabInstance:
     - target: {fileID: 8314318269352078577, guid: 66ac402061a837849967f63863b5efbe, type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8653328669842183502, guid: 66ac402061a837849967f63863b5efbe, type: 3}
-      propertyPath: m_Text
-      value: 'You can only swap the tiles of the same color, but you can swap them
-        over any distance.
-
-'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66ac402061a837849967f63863b5efbe, type: 3}
