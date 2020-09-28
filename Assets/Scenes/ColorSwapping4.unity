@@ -4491,7 +4491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 770761473259160601, guid: 66ac402061a837849967f63863b5efbe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 770761473259160602, guid: 66ac402061a837849967f63863b5efbe, type: 3}
       propertyPath: m_AnchorMin.y
@@ -4623,7 +4623,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3564118892732482886, guid: 66ac402061a837849967f63863b5efbe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_IntArgument
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3564118892837181052, guid: 66ac402061a837849967f63863b5efbe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4655,7 +4655,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4734684564795082281, guid: 66ac402061a837849967f63863b5efbe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_IntArgument
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66ac402061a837849967f63863b5efbe, type: 3}
