@@ -2104,9 +2104,77 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 369228770790226324, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 369228770790226324, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 369228770790226324, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 369228770790226324, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -274.2192
+      objectReference: {fileID: 0}
+    - target: {fileID: 770761471560790677, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 770761471897264196, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 770761471897264196, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 770761471897264196, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 770761471897264196, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -274.2192
+      objectReference: {fileID: 0}
+    - target: {fileID: 770761472037160666, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 770761472037160666, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 770761472037160666, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 770761472037160666, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -129.41708
+      objectReference: {fileID: 0}
     - target: {fileID: 770761473259160601, guid: 66ac402061a837849967f63863b5efbe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1190710680093785888, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1190710680093785888, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1190710680093785888, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1190710680093785888, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -129.41708
       objectReference: {fileID: 0}
     - target: {fileID: 3564118891561421825, guid: 66ac402061a837849967f63863b5efbe, type: 3}
       propertyPath: m_Name
@@ -2204,9 +2272,65 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1586943793}
+    - target: {fileID: 3852340457460532441, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4108543189280847367, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4108543189280847367, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4108543189280847367, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4108543189280847367, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -129.41708
+      objectReference: {fileID: 0}
     - target: {fileID: 4734684564795082281, guid: 66ac402061a837849967f63863b5efbe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_IntArgument
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5346425372969186324, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5346425372969186324, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5346425372969186324, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 5346425372969186324, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -274.2192
+      objectReference: {fileID: 0}
+    - target: {fileID: 6789587550796316521, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_Text
+      value: Broken wire tiles block your path and must be worked around as they
+        can't be swapped.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7241075197330499920, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314318269352078577, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8653328669842183502, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+      propertyPath: m_Text
+      value: 'You can only swap the tiles of the same color, but you can swap them
+        over any distance.
+
+'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66ac402061a837849967f63863b5efbe, type: 3}
