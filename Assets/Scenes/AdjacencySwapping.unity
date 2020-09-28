@@ -768,19 +768,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 770761471897264196, guid: 66ac402061a837849967f63863b5efbe, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 770761471897264196, guid: 66ac402061a837849967f63863b5efbe, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 770761471897264196, guid: 66ac402061a837849967f63863b5efbe, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 125
       objectReference: {fileID: 0}
     - target: {fileID: 770761471897264196, guid: 66ac402061a837849967f63863b5efbe, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -274.41217
       objectReference: {fileID: 0}
     - target: {fileID: 770761472007443541, guid: 66ac402061a837849967f63863b5efbe, type: 3}
       propertyPath: m_IsActive
@@ -824,19 +824,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 770761472037160666, guid: 66ac402061a837849967f63863b5efbe, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 770761472037160666, guid: 66ac402061a837849967f63863b5efbe, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 770761472037160666, guid: 66ac402061a837849967f63863b5efbe, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 125
       objectReference: {fileID: 0}
     - target: {fileID: 770761472037160666, guid: 66ac402061a837849967f63863b5efbe, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -129.48141
       objectReference: {fileID: 0}
     - target: {fileID: 770761472531510360, guid: 66ac402061a837849967f63863b5efbe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -936,7 +936,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3564118891561421825, guid: 66ac402061a837849967f63863b5efbe, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3564118891561421837, guid: 66ac402061a837849967f63863b5efbe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1660,11 +1660,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6918711959513487501, guid: 947de15f75dc76442a315f7e37b9feb1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 1
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 6918711959513487501, guid: 947de15f75dc76442a315f7e37b9feb1, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 6918711959513487501, guid: 947de15f75dc76442a315f7e37b9feb1, type: 3}
       propertyPath: m_RootOrder
@@ -1680,11 +1680,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6918711959513487501, guid: 947de15f75dc76442a315f7e37b9feb1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 180
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 7410725583816429383, guid: 947de15f75dc76442a315f7e37b9feb1, type: 3}
       propertyPath: direction
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 947de15f75dc76442a315f7e37b9feb1, type: 3}
@@ -3048,6 +3048,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 99686395}
     m_Modifications:
+    - target: {fileID: 1888913561218966604, guid: 7a6e88ca0048d8c4690e0454fc137b36, type: 3}
+      propertyPath: direction
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5445384744223184807, guid: 7a6e88ca0048d8c4690e0454fc137b36, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.875
