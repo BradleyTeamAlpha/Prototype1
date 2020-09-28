@@ -925,7 +925,7 @@ PrefabInstance:
     - target: {fileID: 3577085435813747792, guid: 7a45350f7bf071042ae052a70136ce72, type: 3}
       propertyPath: winObject
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 770761473272138284}
     - target: {fileID: 3577085435813747792, guid: 7a45350f7bf071042ae052a70136ce72, type: 3}
       propertyPath: furnacesToWin
       value: 1
@@ -2550,7 +2550,7 @@ Transform:
   m_Children:
   - {fileID: 670323862}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &980167866
 PrefabInstance:
@@ -4635,7 +4635,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3564118892837181053, guid: 66ac402061a837849967f63863b5efbe, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1.6000061
+      value: -1.6000366
       objectReference: {fileID: 0}
     - target: {fileID: 3564118893061254060, guid: 66ac402061a837849967f63863b5efbe, type: 3}
       propertyPath: m_IsActive
@@ -4659,6 +4659,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+--- !u!1 &770761473272138284 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3564118891452126492, guid: 66ac402061a837849967f63863b5efbe, type: 3}
+  m_PrefabInstance: {fileID: 770761473272138283}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6605932234990893538
 Transform:
   m_ObjectHideFlags: 0
