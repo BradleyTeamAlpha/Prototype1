@@ -97,4 +97,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toSpawn: {fileID: 8180540442625612513, guid: 021487d22960678498b9ff0f6c9e6bd6, type: 3}
   spawnOffset: {x: 0, y: 0, z: 0}
-  spawnTimer: 2.5
+  spawnTimer: 1
